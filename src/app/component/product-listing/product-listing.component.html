@@ -1,0 +1,28 @@
+<h1>Product Listing</h1>
+<div class="bd-example">
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th  class="column">Option Title</th>
+          <th  class="column">Description</th>
+          <th  class="column">Price</th>
+          <th  class="column">Discount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of result">
+           <td class="column">{{ row.title }}</td>
+           <td class="column">{{ row.description }}</td>
+           <td class="column">{{ row.price }}</td>
+           <td class="column">{{ row.discount }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="isBusy">
+      <app-busy-indicator>
+      </app-busy-indicator>
+    </div>
+  </div>
+</div>
+
